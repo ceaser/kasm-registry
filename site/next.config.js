@@ -7,7 +7,7 @@ const nextConfig = {
     name: 'My Registry',
     description: 'My test registry',
     icon: '/img/logo.svg',
-    listUrl: 'https://registry.kasmweb.com/',
+    listUrl: 'https://ceaser.github.io/kasm-registry/',
     contactUrl: 'https://kasmweb.com/support',
   },
   reactStrictMode: true,
