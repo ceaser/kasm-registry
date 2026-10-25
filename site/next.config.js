@@ -4,8 +4,8 @@ const nextConfig = {
   output: 'export',
   distDir: '../public',
   env: {
-    name: 'Kasm Technologies',
-    description: 'The official store for Kasm supported workspaces.',
+    name: 'My Registry',
+    description: 'My test registry',
     icon: '/img/logo.svg',
     listUrl: 'https://registry.kasmweb.com/',
     contactUrl: 'https://kasmweb.com/support',
