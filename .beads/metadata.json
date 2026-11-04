@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "kasm_registry",
+  "project_id": "48634580-35cf-4bf4-8968-55e8b2b98d86"
+}
