@@ -1,0 +1,42 @@
+{
+  "description": "Ubuntu Noble desktop for Node.js development with Node.js 22.23.4, corepack, pnpm, git and yadm preinstalled.",
+  "docker_registry": "https://ghcr.io/",
+  "image_src": "nodejs-dev.png",
+  "run_config": {
+    "hostname": "kasm"
+  },
+  "categories": [
+    "Development",
+    "Desktop"
+  ],
+  "friendly_name": "Node.js Development",
+  "architecture": [
+    "amd64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.17.x",
+      "image": "ghcr.io/ceaser/kasm-nodejs:1.17.0",
+      "uncompressed_size_mb": 9153,
+      "available_tags": [
+        "develop"
+      ]
+    },
+    {
+      "version": "1.18.x",
+      "image": "ghcr.io/ceaser/kasm-nodejs:1.18.0",
+      "uncompressed_size_mb": 11169,
+      "available_tags": [
+        "develop"
+      ]
+    },
+    {
+      "version": "1.19.x",
+      "image": "ghcr.io/ceaser/kasm-nodejs:1.19.0",
+      "uncompressed_size_mb": 11255,
+      "available_tags": [
+        "develop"
+      ]
+    }
+  ]
+}
