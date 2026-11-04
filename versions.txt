@@ -1,3 +1,4 @@
 1.0
 1.1
+__dolt_remote_info__
 feature_dependency_update
