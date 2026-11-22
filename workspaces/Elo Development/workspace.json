@@ -1,0 +1,26 @@
+{
+  "description": "Kasm desktop for developing elo: Erlang/OTP 29, rebar3, Claude Code, Codex, opencode, tmux, vim, neovim, Firefox and a clone of main. Rolling image, rebuilt on every merge. The image is private: set GHCR credentials on the workspace.",
+  "docker_registry": "https://ghcr.io/",
+  "image_src": "elo-dev.png",
+  "run_config": {
+    "hostname": "kasm"
+  },
+  "categories": [
+    "Development",
+    "Desktop"
+  ],
+  "friendly_name": "Elo Development",
+  "architecture": [
+    "amd64"
+  ],
+  "compatibility": [
+    {
+      "version": "1.19.x",
+      "image": "ghcr.io/ceaser/elo-kasm:latest",
+      "uncompressed_size_mb": 8081,
+      "available_tags": [
+        "latest"
+      ]
+    }
+  ]
+}
