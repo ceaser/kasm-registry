@@ -1,4 +1,4 @@
-# Kasm Workspaces image: Ubuntu Noble desktop + Node.js, corepack, pnpm, git, yadm
+# Kasm Workspaces image: Ubuntu Noble desktop + Node.js, corepack, pnpm, git, GitHub CLI, yadm
 #
 # Build (see build.sh):
 #   docker build --build-arg BASE_TAG=1.19.0 -t ghcr.io/ceaser/kasm-nodejs:1.19.0 .
@@ -19,6 +19,7 @@ WORKDIR $HOME
 ARG NODE_VERSION=22.23.4
 ARG PNPM_VERSION=12.16.1
 ARG YADM_VERSION=3.5.0
+ARG GH_VERSION=2.103.3
 
 # git (needed by yadm and general development), plus tools used below.
 RUN apt-get update \
@@ -63,6 +64,18 @@ RUN set -eux; \
 # pnpm global installs (`pnpm add -g`) need PNPM_HOME on PATH.
 ENV PNPM_HOME=/home/kasm-user/.local/share/pnpm
 ENV PATH=$PNPM_HOME:$PATH
+
+# GitHub CLI from the official release .deb, verified against the published
+# checksums file.
+RUN set -eux; \
+    DEB="gh_${GH_VERSION}_linux_$(dpkg --print-architecture).deb"; \
+    cd /tmp; \
+    curl -fsSLO "https://github.com/cli/cli/releases/download/v${GH_VERSION}/${DEB}"; \
+    curl -fsSLO "https://github.com/cli/cli/releases/download/v${GH_VERSION}/gh_${GH_VERSION}_checksums.txt"; \
+    grep " ${DEB}\$" "gh_${GH_VERSION}_checksums.txt" | sha256sum -c -; \
+    dpkg -i "${DEB}"; \
+    rm -f "${DEB}" "gh_${GH_VERSION}_checksums.txt"; \
+    gh --version
 
 # yadm (dotfile manager) is a single bash script; install the pinned release.
 RUN set -eux; \

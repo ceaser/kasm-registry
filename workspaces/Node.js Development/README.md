@@ -9,6 +9,7 @@ Kasm workspace based on `kasmweb/ubuntu-noble-desktop` with:
 | corepack | bundled | Ships with Node.js, enabled              |
 | pnpm     | 12.16.1 | Installed and pinned through corepack    |
 | git      | apt     | Ubuntu Noble package                     |
+| gh       | 2.103.3 | Official release .deb, SHA256 verified   |
 | yadm     | 3.5.0   | Pinned release script from GitHub        |
 
 ## Building
@@ -25,8 +26,8 @@ PUSH=1 ./build.sh 1.17.0 1.18.0 1.19.0   # build and push every supported releas
 After building, copy the printed uncompressed size into `uncompressed_size_mb`
 for the matching entry in `workspace.json`.
 
-To bump Node.js, pnpm or yadm, change the `NODE_VERSION`, `PNPM_VERSION` or
-`YADM_VERSION` build args in the `Dockerfile` and rebuild.
+To bump Node.js, pnpm, gh or yadm, change the `NODE_VERSION`, `PNPM_VERSION`,
+`GH_VERSION` or `YADM_VERSION` build args in the `Dockerfile` and rebuild.
 
 ## Notes
 

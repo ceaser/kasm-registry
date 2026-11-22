@@ -1,5 +1,5 @@
 {
-  "description": "Ubuntu Noble desktop for Node.js development with Node.js 22.23.4, corepack, pnpm, git and yadm preinstalled.",
+  "description": "Ubuntu Noble desktop for Node.js development with Node.js 22.23.4, corepack, pnpm, git, GitHub CLI (gh) and yadm preinstalled.",
   "docker_registry": "https://ghcr.io/",
   "image_src": "nodejs-dev.png",
   "run_config": {
@@ -33,7 +33,7 @@
     {
       "version": "1.19.x",
       "image": "ghcr.io/ceaser/kasm-nodejs:1.19.0",
-      "uncompressed_size_mb": 11255,
+      "uncompressed_size_mb": 11301,
       "available_tags": [
         "1.19.0"
       ]
